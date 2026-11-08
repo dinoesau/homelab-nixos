@@ -8,6 +8,21 @@ nix run nixpkgs#nixos-anywhere -- \
   root@192.168.100.3
 ```
 
+
+### Update password after install for `root` and `dinoesau` user
+
+Update root password
+
+```bash
+sudo passwd -l root
+```
+
+Update dinoesau password
+
+```bash
+sudo passwd -l dinoesau
+```
+
 ## Updating OS Host over ssh
 
 ```bash
