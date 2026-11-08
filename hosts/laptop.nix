@@ -69,5 +69,12 @@
 
   services.upower.ignoreLid = true;
 
+  system.autoUpgrade = {
+    enable = true;
+    flake = "github:dinoesau/homelab-nixos#laptop";
+    flags = [ "--print-build-logs" ];
+    dates = "weekly";
+  };
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
