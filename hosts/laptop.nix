@@ -1,9 +1,11 @@
-# laptop1: portable machine with GUI. No media services.
+# laptop1: portable machine with GUI. Includes media services.
 # Generate hardware report on target first:
 #   sudo nixos-facter -o hosts/facter/laptop1.json
 { ... }:
 
 {
+  imports = [ ../modules/media.nix ];
+
   networking.hostName = "acer-laptop";
 
   # Wired is static, no DHCP. Same 192.168.100.3/24 as the old lease, so hitless.

@@ -4,7 +4,7 @@
 {
   services.jellyfin = {
     enable = true;
-    openFirewall = false;
+    openFirewall = true;
   };
 
   virtualisation.docker.enable = true;
