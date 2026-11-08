@@ -45,4 +45,6 @@
     enable = true;
     preset = [ "compatibility" ];
   };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
