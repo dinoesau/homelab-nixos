@@ -32,3 +32,15 @@ nix run nixpkgs#nixos-rebuild -- \
   --build-host root@192.168.100.3 \
   --no-reexec switch
 ```
+
+### Clean Reinstall (nix-mineral bypass)
+
+The blocker is only that nixos-anywhere hardcodes /root/kexec, and your current system mounts /root as noexec (via nix-mineral). 
+
+Temporary remount (simplest, hardening returns after reinstall anyway since disko wipes):
+
+```bash
+ssh root@192.168.100.3 'mount -o remount,exec /root'
+```
+
+Now you can run the install command as always
