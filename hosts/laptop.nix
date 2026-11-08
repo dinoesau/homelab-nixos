@@ -15,7 +15,7 @@
     matchConfig.MACAddress = "98:28:a6:26:e1:a4";
     address = [ "192.168.100.3/24" ];
     routes = [ { Gateway = "192.168.100.1"; } ];
-    dns = [ "192.168.100.1" "2001:4860:4860::8888" ];
+    dns = [ "192.168.100.1" "8.8.8.8" "1.1.1.1" ];
     networkConfig = {
       DHCP = "no";
       IPv6AcceptRA = true;
